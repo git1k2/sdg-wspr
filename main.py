@@ -1,10 +1,6 @@
 import math
 import sys
 
-# Inspired from http://www.arrl.org/files/file/QEX_Next_Issue/May-June2019/Steber.pdf
-# Generate a WSPR message with WSPRMSG.exe, remove everything except the comma seperated values.
-# Save file as WSPRMSG.txt in this directory.
-
 
 def wsprmsg(filename=None):
     wsprmsg_list = []
