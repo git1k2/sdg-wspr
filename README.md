@@ -3,7 +3,7 @@ Proof of concept for transmitting WSPR with a Siglent Function /
 Arbitrary Waveform Generator. Tested with Siglent SDG-1032X. Channel 2 
 is the FM source for channel 1.
 
-Inspired by [http://www.arrl.org/files/file/QEX_Next_Issue/May-June2019/Steber.pdf]
+Inspired by http://www.arrl.org/files/file/QEX_Next_Issue/May-June2019/Steber.pdf
 
 My HF 0 dBm (1 mW) signal into an endfed sloper antenna was heard a few 
 hundred to 1500 km away!
