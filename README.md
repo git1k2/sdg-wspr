@@ -1,7 +1,7 @@
 # siglent-sdg-wspr
 Proof of concept for transmitting WSPR with a Siglent Function / 
 Arbitrary Waveform Generator. Tested with Siglent SDG-1032X. Channel 2 
-is the FM source for the channel 1.
+is the FM source for channel 1.
 
 Inspired by [http://www.arrl.org/files/file/QEX_Next_Issue/May-June2019
 /Steber.pdf]
@@ -17,7 +17,8 @@ necessary.
 ### Generate the arbitrary gate waveform 
 - Generate a WSPR message with WSPRMSG.exe, remove everything except the comma seperated values.
 - Save file as WSPRMSG.txt in this directory.
-- Rename this file to something useful, for example `wspr0dBm.csv`.
+- Run `main.py`, it will write a `wspr.csv` file.
+- Optional: rename this file to something useful, for example `wspr0dBm.csv`.
 - `wspr0dBm.csv` becomes waveform 'wspr0dBm' in the SDG.
 - Load `wspr0dBm.csv` into EasyWaveX and upload it to the generator:
 
@@ -28,14 +29,13 @@ necessary.
 - Connect channel 2 to the aux input on the back of the instrument.
 - Connect a 10 MHz reference. This results in a stable signal.
 
-### Run the sdg.sh script
+### Run the sdg-wspr.sh script
 - Install lxi-tools (Ubuntu): `snap install lxi-tools`
 - Find your device: `lxi discover`
 - Get the waveform name: `lxi scpi -a <IP address> "STL? USER"`
-- Edit at least the variables below in `sdg.sh`
+- Edit at least the variables below in `sdg-wsrp.sh`
   - `address`: SDG IP address
   - `freq`: frequency in Herz.
   - `ampl`: amplitude in Vpp.
   - `wave`: waveform name.
-
 - Run `sdg-wspr.sh`
